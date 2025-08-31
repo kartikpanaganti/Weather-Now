@@ -42,7 +42,7 @@ src/
 
 ### 1️⃣ Clone Repo
 ```
-git clone https://github.com/your-username/weather-now.git
+git clone https://github.com/your-username/Weather-Now.git
 cd weather-now
 ```
 
