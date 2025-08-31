@@ -63,10 +63,12 @@ http://localhost:5173
 
 🌍 Deployment
 Easily deploy with:
+codeSandbox
 
-**CodeSandbox**
 
-📸 Preview (Example Layout)
+##
+**📸Preview**
+---
 <img width="1598" height="733" alt="image" src="https://github.com/user-attachments/assets/3e9f072a-9d61-46ee-ae7e-e83acf1d87e8" />
 
 
