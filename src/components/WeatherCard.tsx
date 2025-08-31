@@ -1,9 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function WeatherCard({ weather }) {
+// define shape of weather data
+interface WeatherData {
+  city: string;
+  temp: number;
+  wind: number;
+  condition: number; // Open-Meteo weather code
+}
+
+interface WeatherCardProps {
+  weather: WeatherData;
+}
+
+export default function WeatherCard({ weather }: WeatherCardProps) {
   // Animated weather icons
-  const icons = {
+  const icons: Record<number, JSX.Element> = {
     0: (
       <motion.div
         animate={{ rotate: 360 }}
@@ -75,7 +87,7 @@ export default function WeatherCard({ weather }) {
     ),
   };
 
-  const descriptions = {
+  const descriptions: Record<number, string> = {
     0: "Clear sky",
     1: "Mainly clear",
     2: "Partly cloudy",

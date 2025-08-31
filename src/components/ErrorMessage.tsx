@@ -1,7 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function ErrorMessage({ message }) {
+interface ErrorMessageProps {
+  message: string;
+}
+
+export default function ErrorMessage({ message }: ErrorMessageProps) {
   return (
     <motion.p
       initial={{ opacity: 0, y: -10 }}

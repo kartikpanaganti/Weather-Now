@@ -5,13 +5,21 @@ import WeatherCard from "./components/WeatherCard";
 import ErrorMessage from "./components/ErrorMessage";
 import Footer from "./components/Footer";
 
+// define what weather data looks like
+interface WeatherData {
+  city: string;
+  temp: number;
+  wind: number;
+  condition: number; // Open-Meteo weathercode
+}
+
 export default function App() {
-  const [weather, setWeather] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [weather, setWeather] = useState<WeatherData | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   // Fetch weather
-  const fetchWeather = async (city) => {
+  const fetchWeather = async (city: string) => {
     if (!city) return;
     setLoading(true);
     setError(null);

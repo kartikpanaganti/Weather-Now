@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-export default function SearchBar({ onSearch, loading }) {
-  const [city, setCity] = useState("");
+// define props shape
+interface SearchBarProps {
+  onSearch: (city: string) => void;
+  loading: boolean;
+}
 
-  const handleSubmit = (e) => {
+export default function SearchBar({ onSearch, loading }: SearchBarProps) {
+  const [city, setCity] = useState<string>("");
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     onSearch(city);
   };
