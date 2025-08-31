@@ -57,9 +57,11 @@ npm run dev
 ```
 
 4️⃣ Open in Browser Navigate to 👉 
+
 ```
-http://localhost:5173
+http://http://localhost:3000
 ```
+
 
 🌍 Deployment
 Easily deploy with:
